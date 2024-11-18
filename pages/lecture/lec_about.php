@@ -108,22 +108,22 @@ session_start();
         <h2>Our Crew</h2>
         <div class="crew-container">
             <div class="crew-member">
-                <img src="../../assets\Images\Crew_profile\profile2.jpg" alt="Member 1" class="profile-photo"> <!-- Replace with actual image path -->
+                <img src="../../assets\Images\Crew_profile\profile1.jpg" alt="Member 1" class="profile-photo"> <!-- Replace with actual image path -->
                 <h3>Awishka Isuru</h3>
                 <p>Founder & CEO</p>
             </div>
             <div class="crew-member">
-                <img src="../../assets/Images/Crew_profile/profile1.JPG" alt="Member 2" class="profile-photo"> <!-- Replace with actual image path -->
+                <img src="../../assets/Images/Crew_profile/profile2.JPG" alt="Member 2" class="profile-photo"> <!-- Replace with actual image path -->
                 <h3>Sandesh Nawarathne</h3>
                 <p>Head of Development</p>
             </div>
             <div class="crew-member">
-                <img src="../../assets\Images\Crew_profile\profile2.jpg" alt="Member 3" class="profile-photo"> <!-- Replace with actual image path -->
+                <img src="../../assets\Images\Crew_profile\profile3.jpg" alt="Member 3" class="profile-photo"> <!-- Replace with actual image path -->
                 <h3>Chavindu Priyasara</h3>
                 <p>Marketing Specialist</p>
             </div>
             <div class="crew-member">
-                <img src="../../assets/Images/Crew_profile/profile1.JPG" alt="Member 4" class="profile-photo"> <!-- Replace with actual image path -->
+                <img src="../../assets/Images/Crew_profile/profile4.JPG" alt="Member 4" class="profile-photo"> <!-- Replace with actual image path -->
                 <h3>Gaganathara Suraweera</h3>
                 <p>Product Manager</p>
             </div>
