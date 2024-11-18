@@ -209,6 +209,7 @@ if (isset($_GET['delete'])) {
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 80px;
+            text-decoration: none;
         }
 
         .button1 {
@@ -221,6 +222,7 @@ if (isset($_GET['delete'])) {
             border-color: white;
             color: white;
             margin-bottom: 50px;
+            text-decoration: none;
 
         }
 
@@ -234,6 +236,7 @@ if (isset($_GET['delete'])) {
             border-color: white;
             color: white;
             margin-bottom: 50px;
+            text-decoration: none;
         }
 
         .button3 {
@@ -246,6 +249,7 @@ if (isset($_GET['delete'])) {
             border-color: white;
             color: white;
             margin-bottom: 50px;
+            text-decoration: none;
         }
 
         .button4 {
@@ -258,6 +262,7 @@ if (isset($_GET['delete'])) {
             border-color: white;
             color: white;
             margin-bottom: 50px;
+            text-decoration: none;
         }
 
         .button-container :hover {
@@ -376,10 +381,10 @@ if (isset($_GET['delete'])) {
 
 
     <div class="button-container">
-        <button class="button1">Lec Material</button>
-        <button class="button2">Pass Papers</button>
-        <button class="button3">Model Papers</button>
-        <button class="button4">Learning resources</button>
+    <a href="https://drive.google.com/drive/folders/1EkHP0K-UWHOg7dcAFn5Oki_q0TWtFZnG?usp=drive_link" class="button1">Lec Material</a>
+    <a href="https://drive.google.com/drive/folders/1sWKJ48Li7UXcKe2pEDpQsYZ7zhA6x94u?usp=drive_link" class="button2">Pass Papers</a>
+    <a href="https://drive.google.com/drive/folders/1sWKJ48Li7UXcKe2pEDpQsYZ7zhA6x94u?usp=drive_link" class="button3">Model Papers</a>
+    <a href="https://drive.google.com/drive/folders/1KePd7JLgYSEj-2NNsCSkxVjiTym2VRMu?usp=drive_link" class="button4">Learning Resources</a>
     </div>
     <div>
         <style>

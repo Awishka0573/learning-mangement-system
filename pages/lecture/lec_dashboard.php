@@ -24,6 +24,19 @@ if (isset($_SESSION['lec_id'])) {
     echo "No lecturer is logged in.";
 }
 
+    if(isset($_POST['submit_up'])){
+            $name = $_POST['name'];
+            $address = $_POST['address'];          
+            $contact = $_POST['contact'];
+
+        $stmt = $conn->prepare("UPDATE users SET fullname = ?, address = ?, contact = ? WHERE id =  $lecturer_id");
+         $stmt->bind_param("sss", $name , $address, $contact);
+            $stmt->execute();
+         $result = $stmt->get_result();
+
+         header("Location:./lec_dashboard.php");
+    }
+
 ?>
 
 
@@ -88,7 +101,7 @@ if (isset($_SESSION['lec_id'])) {
             justify-content: space-between;
         }
 
-        .lec-info h1 {
+        /* .lec-info h1 {
             font-size: 30px;
             margin-bottom: 40px;
         }
@@ -115,6 +128,59 @@ if (isset($_SESSION['lec_id'])) {
         .lec-info p span {
             color: #333;
             font-weight: 500;
+        } */
+
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-top: -50px;
+        }
+
+        form h1{
+            color: #393546;
+            font-size: 35px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        form input{
+            margin:10px 0px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: #393546;
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+
+        form input:focus{
+            border-bottom: 2px solid darkred;
+        }
+
+        form label{
+           color: #393546;
+           font-size: 18px;
+        }
+
+        form button{
+            background-color: darkred;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            
+        }
+
+        form button:hover{
+            background-color: darkblue;
+        }
+
+        form button:active{
+            background-color: #393546;
+            outline: none;
         }
 
         .subject-buttons {
@@ -177,14 +243,27 @@ if (isset($_SESSION['lec_id'])) {
         <div class="main-content">
             <!-- lec Info -->
 
-            <div class="lec-info" style="padding-top: 25px;">
+            <!-- <div class="lec-info" style="padding-top: 25px;">
                 <h2>Lecturer Information</h2>
                 <p style="margin-top: 12px;"><strong style="display: block; margin-top: 24px;">Register Date:</strong> <span style="font-weight: 400 ;"><?php echo htmlspecialchars($lecturer['create_date']); ?></span></p>
                 <p style="margin-top: 12px;"><strong style="display: block; margin-top: 24px;">Full Name:</strong> <span style="font-weight: 400 ;"><?php echo htmlspecialchars($lecturer['fullname']); ?></span></p>
                 <p style="margin-top: 12px;"><strong style="display: block; margin-top: 24px;">Address:</strong> <span style="font-weight: 400 ;"><?php echo htmlspecialchars($lecturer['address']); ?></span></p>
                 <p style="margin-top: 12px;"><strong style="display: block; margin-top: 24px;">Email:</strong> <span style="font-weight: 400 ;"><?php echo htmlspecialchars($lecturer['email']); ?></span></p>
                 <p style="margin-top: 12px;"><strong style="display: block; margin-top: 24px;">Contact:</strong> <span style="font-weight: 400 ;"><?php echo htmlspecialchars($lecturer['contact']); ?></span></p>
-            </div>
+            </div> -->
+
+            <form action="./lec_dashboard.php" method="POST" class="lec-info" style="padding-top: 25px;">
+                <h1>Lecture Details</h1>
+                <label for="">Name</label>
+                <input type="text" value="<?php echo htmlspecialchars($lecturer['fullname']);?>" name="name">
+                <label for="">Adress</label>
+                <input type="text" value="<?php echo htmlspecialchars($lecturer['address']);?>" name="address">
+                <label for="">Email</label>
+                <input type="text" value="<?php echo htmlspecialchars($lecturer['email']);?>" name="email" disabled>
+                <label for="">Contact</label>
+                <input type="text" value="<?php echo htmlspecialchars($lecturer['contact']);?>" name="contact">
+                <button type="submit" name="submit_up">Update</button>
+            </form>
 
             <!-- Subject Buttons -->
             <div class="subject-buttons">
